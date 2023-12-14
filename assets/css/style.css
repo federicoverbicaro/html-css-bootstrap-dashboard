@@ -8,12 +8,14 @@
 }
 
 .brg-blu-scuro{
-    background-color: rgb(36, 55, 123);
-    background-image:url(../img/sidebar-bg.png);
-    
-
-    
+    background-color: rgb(4,30,52);
+   
 }
+.brg-img{
+    background-image:url(../img/sidebar-bg.png);
+    opacity: 0.9;
+}
+
 .white{
     color: white;
 }
