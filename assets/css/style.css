@@ -19,9 +19,21 @@
 .white{
     color: white;
 }
+.sticky-top {
+    z-index: 96;
+}
+
 /* hover */
 .brg-hover:hover{
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 1; 
     
+}
+/* form utente */
+
+.border-white{
+    border-radius: 0%;
+}
+.z-index{
+z-index: 98;
 }

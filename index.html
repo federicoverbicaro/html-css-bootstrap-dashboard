@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <header class="sticky-top top-0">
         <div class="container-fluid bg-light-subtle p-0 py-3">
             <div class="container-fluid bg-white p-0">
@@ -77,13 +78,15 @@
         </div>
     </header>
 
-    <main class="d-flex">
+    <main class=" d-flex p-0">
         <!-- side bar -->
-        <div class="col-2 col-xl-1">
+        <div class="col-2 col-sm-2 col-md-1 col-lg-1">
 
-            <div class="d-flex flex-column p-0 height brg-blu-scuro brg-img position-sticky">
+            <div
+                class="col-2 col-sm-2 col-md-1 col-lg-1 d-flex flex-column p-0 height brg-blu-scuro brg-img position-fixed ">
 
-                <div class="col d-flex flex-column align-self-center pt-3 row-gap-2 d-xl-flex flex-xl-column align-self-xl-start ps-xl-3">
+                <div
+                    class="col d-flex flex-column align-self-center pt-3 row-gap-2 d-xl-flex flex-xl-column align-self-xl-start ps-xl-3">
 
                     <!-- home -->
                     <span class="brg-hover">
@@ -103,7 +106,7 @@
                         <a class="text-decoration-none" href="#">
 
                             <i class="bi bi-reception-2  fs-4 white ">
-    
+
                                 <span class="fs-6 fst-normal d-none d-xl-inline-block">
                                     Stats
                                 </span>
@@ -124,7 +127,8 @@
                 </div>
 
                 <!-- admin -->
-                <div class="col d-flex align-self-center flex-column justify-content-end pb-3 d-xl-flex flex-xl-column align-self-xl-start ps-xl-3">
+                <div
+                    class="col d-flex align-self-center flex-column justify-content-end pb-3 d-xl-flex flex-xl-column align-self-xl-start ps-xl-3">
                     <span class="brg-hover">
                         <a class="text-decoration-none" href="#">
                             <i class="bi bi-gear-fill white fs-4">
@@ -140,25 +144,186 @@
             </div>
 
         </div>
-        <div class="col-10 ">
-            <div class="">
 
-                <div class="">
-                    <h>ciao</h>
-                    <h>ciao</h>
-                    <h>ciao</h>
-                    <h>ciao</h>
-                    <h>ciao</h>
-                    <h>ciao</h>
-                    <h>ciao</h>
-                    <h>ciao</h>
-                    <h>ciao</h>
+        <div class="col-10 col-sm-10 col-md-11 col-lg-11 border1 overflow-scroll">
+            <div class="flex-column flex-md-row bg-primary opacity-75 border1 d-flex end-0 justify-content-md-between">
+
+                <div class="d-md-flex border1 pt-4 d-flex flex-row">
+
+                    <div class="">
+                        <span class="text-capitalize white fs-3 p-2 ">nuovo studente </span>
+                    </div>
+
+                    <div class="">
+                        <!-- form -->
+                        <!-- Pulsante che attiva il form -->
+                        <button class="btn border border-2 border-white  btn-primary rounded" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"><i class="bi bi-plus-lg"></i>
+                        </button>
+
+                        <!-- Modal del form -->
+
+                        <div class="modal fade end-0 bg-transparent z-index position-fixed" id="exampleModal" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                            <div class="modal-dialog m-0 float-end w-100 h-100 d-flex flex-column">
+
+                                <div class="modal-content rounded-0 border-white">
+
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Inserisci un nuovo studente</h5>
+
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <!-- Contenuto del form -->
+                                        <form class="row g-4 ">
+
+                                            <div class="row mt-2 flex-column flex-md-row">
+                                                <div class="col">
+                                                    <label for="inputAddress2" class="form-label">Nome</label>
+                                                    <input type="text" class="form-control" placeholder=""
+                                                        aria-label="First name">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="inputAddress2" class="form-label">Cognome</label>
+                                                    <input type="text" class="form-control" placeholder=""
+                                                        aria-label="Last name">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-2 flex-column flex-md-row">
+                                                <div class="col input-group">
+
+                                                    <div class="col ">
+                                                        <label for="inputPassword4" class="form-label">Email</label>
+                                                        <div class="col input-group">
+                                                            <span class="input-group-text">@</span>
+                                                            <input type="password" class="form-control"
+                                                                id="inputPassword4">
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="col">
+                                                    <label for="inputPassword4" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="inputPassword4">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-2 flex-column flex-md-row">
+                                                <div class="col input-group">
+
+                                                    <div class="col ">
+                                                        <label for="inputPassword4" class="form-label">Email</label>
+                                                        <div class="col input-group">
+                                                            <span class="input-group-text">@</span>
+                                                            <input type="password" class="form-control"
+                                                                id="inputPassword4">
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="col">
+                                                    <label for="inputPassword4" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="inputPassword4">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-12">
+                                                <label for="inputAddress2" class="form-label">Address 2</label>
+                                                <input type="text" class="form-control" id="inputAddress2"
+                                                    placeholder="">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="inputCity" class="form-label">City</label>
+                                                <input type="text" class="form-control" id="inputCity">
+                                            </div>
+
+
+                                            <div class="col-md-4">
+                                                <label for="inputState" class="form-label">Stato</label>
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle w-100 bg-white border text-start"
+                                                        type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-bs-placement="bottom-start">
+                                                        Scegli...
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <li><a class="dropdown-item" href="#">Italia</a></li>
+                                                        <li><a class="dropdown-item" href="#">Spagna</a></li>
+                                                        <li><a class="dropdown-item" href="#">Belgio</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-2">
+                                                <label for="inputZip" class="form-label">CAP</label>
+                                                <input type="text" class="form-control" id="inputZip">
+                                            </div>
+
+
+                                            <div class="input-group mb-3">
+                                                <input type="file" class="form-control" id="inputGroupFile02">
+                                            </div>
+
+                                            <div class="col-12 ">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <label class="form-check-label" for="gridCheck">
+                                                        Seleziona per proseguire
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button class="btn btn-primary" type="button">Salva</button>
+                                                <button class="btn link-warning bg-warning text-white "
+                                                    type="button">Svuota</button>
+                                            </div>
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
+                <div class="d-md-flex border1 w-50">
+
+                    <div class="white fs-1">
+                       <span>Boolean</span>
+                    </div>
+                </div>
+
+                <div class="d-md-flex border1 ">
+
+                    <div class=" white fs-4">
+                      <span>Studenti online negli ultimi 30 minuti</span>
+                      <span>125</span>
+                    </div>
+
+                </div>
+
+
             </div>
 
         </div>
 
     </main>
+
     <footer></footer>
 
 
