@@ -1,27 +1,37 @@
 /* classi utility */
-
+main{
+    margin-top: 50px;
+}
 .border1{
     border: 1px solid red !important;
 }
-.height{
-    height:calc(100vh - 81px);
-}
-
 .brg-blu-scuro{
     background-color: rgb(4,30,52);
    
 }
 .brg-img{
     background-image:url(../img/sidebar-bg.png);
-    opacity: 0.9;
 }
-
 .white{
     color: white;
 }
-.sticky-top {
-    z-index: 96;
+.z-index{
+    z-index: 98;
 }
+.icons-end:last-child{
+display: flex;
+
+}
+
+
+.height-calc{
+    height:calc(100vh - 50px) !important;
+}
+
+.altezza-fissa-header{
+    height: 70px;
+}
+
 
 /* hover */
 .brg-hover:hover{
@@ -34,6 +44,11 @@
 .border-white{
     border-radius: 0%;
 }
-.z-index{
-z-index: 98;
+
+
+/* MEDIA QUERY */
+@media (min-width: 768px) {
+    .custom-sidebar {
+        height: 100vh;
+    }
 }
