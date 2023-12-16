@@ -123,145 +123,129 @@
                         <div class=" d-flex justify-content-center align-items-center ps-3">
 
                             <!-- Pulsante che attiva il form -->
-                            <button class="btn border border-2 border-white  btn-primary rounded "
-                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-lg"></i>
+                            <button class="btn btn-primary border border-2 white" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <span>+</span>
                             </button>
                         </div>
+
                         <!-- Modal del form -->
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <form class="row g-4 ">
 
-                        <div class="modal fade end-0 overflow-y-scroll" id="exampleModal" tabindex="-1"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-                            <div class="modal-dialog m-0 float-end d-flex flex-column">
-
-                                <div class="modal-content custom-sidebar rounded-0 border-white">
-
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Inserisci un nuovo
-                                            studente</h5>
-
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                    <div class="row mt-2 flex-column flex-md-row">
+                                        <div class="col">
+                                            <label for="inputAddress2" class="form-label">Nome</label>
+                                            <input type="text" class="form-control" placeholder=""
+                                                aria-label="First name">
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputAddress2" class="form-label">Cognome</label>
+                                            <input type="text" class="form-control" placeholder=""
+                                                aria-label="Last name">
+                                        </div>
                                     </div>
 
-                                    <div class="modal-body">
-                                        <!-- Contenuto del form -->
-                                        <form class="row g-4 ">
+                                    <div class="row mt-2 flex-column flex-md-row">
+                                        <div class="col input-group">
 
-                                            <div class="row mt-2 flex-column flex-md-row">
-                                                <div class="col">
-                                                    <label for="inputAddress2" class="form-label">Nome</label>
-                                                    <input type="text" class="form-control" placeholder=""
-                                                        aria-label="First name">
-                                                </div>
-                                                <div class="col">
-                                                    <label for="inputAddress2" class="form-label">Cognome</label>
-                                                    <input type="text" class="form-control" placeholder=""
-                                                        aria-label="Last name">
-                                                </div>
-                                            </div>
-
-                                            <div class="row mt-2 flex-column flex-md-row">
+                                            <div class="col ">
+                                                <label for="inputPassword4" class="form-label">Email</label>
                                                 <div class="col input-group">
-
-                                                    <div class="col ">
-                                                        <label for="inputPassword4" class="form-label">Email</label>
-                                                        <div class="col input-group">
-                                                            <span class="input-group-text">@</span>
-                                                            <input type="password" class="form-control"
-                                                                id="inputPassword4">
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="col">
-                                                    <label for="inputPassword4" class="form-label">Password</label>
-                                                    <input type="password" class="form-control" id="inputPassword4">
-                                                </div>
-                                            </div>
-
-                                            <div class="row mt-2 flex-column flex-md-row">
-                                                <div class="col input-group">
-
-                                                    <div class="col ">
-                                                        <label for="inputPassword4" class="form-label">Email</label>
-                                                        <div class="col input-group">
-                                                            <span class="input-group-text">@</span>
-                                                            <input type="password" class="form-control"
-                                                                id="inputPassword4">
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="col">
-                                                    <label for="inputPassword4" class="form-label">Password</label>
+                                                    <span class="input-group-text">@</span>
                                                     <input type="password" class="form-control" id="inputPassword4">
                                                 </div>
                                             </div>
 
 
-                                            <div class="col-12">
-                                                <label for="inputAddress2" class="form-label">Address 2</label>
-                                                <input type="text" class="form-control" id="inputAddress2"
-                                                    placeholder="">
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <label for="inputCity" class="form-label">City</label>
-                                                <input type="text" class="form-control" id="inputCity">
-                                            </div>
-
-
-                                            <div class="col-md-4">
-                                                <label for="inputState" class="form-label">Stato</label>
-                                                <div class="dropdown">
-                                                    <button class="btn dropdown-toggle w-100 bg-white border text-start"
-                                                        type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                                                        aria-haspopup="true" aria-expanded="false"
-                                                        data-bs-placement="bottom-start">
-                                                        Scegli...
-                                                    </button>
-                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <li><a class="dropdown-item" href="#">Italia</a></li>
-                                                        <li><a class="dropdown-item" href="#">Spagna</a></li>
-                                                        <li><a class="dropdown-item" href="#">Belgio</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-md-2">
-                                                <label for="inputZip" class="form-label">CAP</label>
-                                                <input type="text" class="form-control" id="inputZip">
-                                            </div>
-
-
-                                            <div class="input-group mb-3">
-                                                <input type="file" class="form-control" id="inputGroupFile02">
-                                            </div>
-
-                                            <div class="col-12 ">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                    <label class="form-check-label" for="gridCheck">
-                                                        Seleziona per proseguire
-                                                    </label>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-grid gap-2 d-md-block">
-                                                <button class="btn btn-primary" type="button">Salva</button>
-                                                <button class="btn link-warning bg-warning text-white "
-                                                    type="button">Svuota</button>
-                                            </div>
-                                        </form>
-
-
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputPassword4" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4">
+                                        </div>
                                     </div>
 
-                                </div>
+                                    <div class="row mt-2 flex-column flex-md-row">
+                                        <div class="col input-group">
+
+                                            <div class="col ">
+                                                <label for="inputPassword4" class="form-label">Email</label>
+                                                <div class="col input-group">
+                                                    <span class="input-group-text">@</span>
+                                                    <input type="password" class="form-control" id="inputPassword4">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputPassword4" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <label for="inputAddress2" class="form-label">Address 2</label>
+                                        <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="inputCity" class="form-label">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <label for="inputState" class="form-label">Stato</label>
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle w-100 bg-white border text-start"
+                                                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"
+                                                data-bs-placement="bottom-start">
+                                                Scegli...
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="#">Italia</a></li>
+                                                <li><a class="dropdown-item" href="#">Spagna</a></li>
+                                                <li><a class="dropdown-item" href="#">Belgio</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-2">
+                                        <label for="inputZip" class="form-label">CAP</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div>
+
+
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="inputGroupFile02">
+                                    </div>
+
+                                    <div class="col-12 ">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Seleziona per proseguire
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid gap-2 d-md-block">
+                                        <button class="btn btn-primary" type="button">Salva</button>
+                                        <button class="btn link-warning bg-warning text-white "
+                                            type="button">Svuota</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 

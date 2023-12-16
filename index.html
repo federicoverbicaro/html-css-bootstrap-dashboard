@@ -77,236 +77,263 @@
         </div>
         </div>
     </header>
-
+    <!-- contenitore del MAIN -->
     <div class="container-fluid">
         <div class="row ">
-
+            <!-- sider bar -->
             <div
                 class="col-2  flex-column d-flex col-lg-1 overflow-hidden bottom-0 position-sticky start-0 top-0 pt-5 vh-100 brg-blu-scuro text-center ">
 
                 <div class="d-flex flex-column ">
-                    <i class="bi bi-house-fill white  fs-4">
+                    <i class="bi bi-house-fill white  fs-4 brg-hover">
                         <span class="fs-6 fst-normal d-none d-xl-inline-block">
                             Home
                         </span>
                     </i>
-                    <i class="bi bi-reception-2  fs-4 white ">
+                    <i class="bi bi-reception-2  fs-4 white brg-hover ">
 
                         <span class="fs-6 fst-normal d-none d-xl-inline-block">
                             Stats
                         </span>
                     </i>
-                    <i class="bi bi-reception-4 white fs-4">
+                    <i class="bi bi-reception-4 white fs-4 brg-hover">
                         <span class="fs-6 fst-normal d-none d-xl-inline-block">
                             Signals
                         </span>
                     </i>
                 </div>
 
-                <div class=" mt-auto ">
-                    <i class="bi bi-gear-fill white fs-4">
+                <div class=" mt-auto d-flex justify-content-center flex-column  ">
+                    <i class="bi bi-gear-fill white fs-4 brg-hover ">
                         <span class="fs-6 fst-normal d-none d-xl-inline-block">
                             Admin
                         </span>
                     </i>
                 </div>
             </div>
+            <!-- MAIN -->
             <main class="col-10 col-lg-11 pt-5 px-0">
 
-                <div class="flex-column flex-md-row bg-primary d-flex end-0 justify-content-md-between px-2">
+                <div class="flex-column flex-md-row bg-primary d-flex end-0 justify-content-md-between px-2 pt-4">
 
+                    <div class="d-md-flex  d-flex flex-row order-md-3 w-25 justify-content-lg-center  justify-content-start">
 
-                    <div class="d-md-flex pt-2 d-flex flex-row order-md-3">
-
-                        <div class="d-flex justify-content-center ">
-                            <span class="text-capitalize white fs-3">nuovo studente </span>
+                        <div class="d-flex ">
+                            <span class="text-capitalize white fs-3  ">nuovo studente </span>
                         </div>
 
-                        <div class=" d-flex align-self-baseline pt-2 ps-3">
+                        <div class=" d-flex justify-content-center align-items-center ps-3 align-self-baseline ">
 
                             <!-- Pulsante che attiva il form -->
-                            <button class="btn border border-2 border-white  btn-primary rounded "
-                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-lg"></i>
+                            <button class="btn btn-primary border border-2 white mt-2" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight">
+                                <span>+</span>
                             </button>
                         </div>
-                        <!-- Modal del form -->
 
-                        <div class="modal fade end-0 overflow-y-scroll" id="exampleModal" tabindex="-1"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <!-- offcanvas form -->
+                        <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci il nuovo studente </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <form class="row g-4 ">
 
-                            <div class="modal-dialog m-0 float-end d-flex flex-column">
-
-                                <div class="modal-content custom-sidebar rounded-0 border-white">
-
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Inserisci un nuovo
-                                            studente</h5>
-
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                    <div class="row mt-2 flex-column flex-md-row">
+                                        <div class="col">
+                                            <label for="inputAddress2" class="form-label">Nome</label>
+                                            <input type="text" class="form-control" placeholder=""
+                                                aria-label="First name">
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputAddress2" class="form-label">Cognome</label>
+                                            <input type="text" class="form-control" placeholder=""
+                                                aria-label="Last name">
+                                        </div>
                                     </div>
 
-                                    <div class="modal-body">
-                                        <!-- Contenuto del form -->
-                                        <form class="row g-4 ">
+                                    <div class="row mt-2 flex-column flex-md-row">
+                                        <div class="col input-group">
 
-                                            <div class="row mt-2 flex-column flex-md-row">
-                                                <div class="col">
-                                                    <label for="inputAddress2" class="form-label">Nome</label>
-                                                    <input type="text" class="form-control" placeholder=""
-                                                        aria-label="First name">
-                                                </div>
-                                                <div class="col">
-                                                    <label for="inputAddress2" class="form-label">Cognome</label>
-                                                    <input type="text" class="form-control" placeholder=""
-                                                        aria-label="Last name">
-                                                </div>
-                                            </div>
-
-                                            <div class="row mt-2 flex-column flex-md-row">
+                                            <div class="col ">
+                                                <label for="inputPassword4" class="form-label">Email</label>
                                                 <div class="col input-group">
-
-                                                    <div class="col ">
-                                                        <label for="inputPassword4" class="form-label">Email</label>
-                                                        <div class="col input-group">
-                                                            <span class="input-group-text">@</span>
-                                                            <input type="password" class="form-control"
-                                                                id="inputPassword4">
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="col">
-                                                    <label for="inputPassword4" class="form-label">Password</label>
-                                                    <input type="password" class="form-control" id="inputPassword4">
-                                                </div>
-                                            </div>
-
-                                            <div class="row mt-2 flex-column flex-md-row">
-                                                <div class="col input-group">
-
-                                                    <div class="col ">
-                                                        <label for="inputPassword4" class="form-label">Email</label>
-                                                        <div class="col input-group">
-                                                            <span class="input-group-text">@</span>
-                                                            <input type="password" class="form-control"
-                                                                id="inputPassword4">
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="col">
-                                                    <label for="inputPassword4" class="form-label">Password</label>
+                                                    <span class="input-group-text">@</span>
                                                     <input type="password" class="form-control" id="inputPassword4">
                                                 </div>
                                             </div>
 
 
-                                            <div class="col-12">
-                                                <label for="inputAddress2" class="form-label">Address 2</label>
-                                                <input type="text" class="form-control" id="inputAddress2"
-                                                    placeholder="">
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <label for="inputCity" class="form-label">City</label>
-                                                <input type="text" class="form-control" id="inputCity">
-                                            </div>
-
-
-                                            <div class="col-md-4">
-                                                <label for="inputState" class="form-label">Stato</label>
-                                                <div class="dropdown">
-                                                    <button class="btn dropdown-toggle w-100 bg-white border text-start"
-                                                        type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                                                        aria-haspopup="true" aria-expanded="false"
-                                                        data-bs-placement="bottom-start">
-                                                        Scegli...
-                                                    </button>
-                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <li><a class="dropdown-item" href="#">Italia</a></li>
-                                                        <li><a class="dropdown-item" href="#">Spagna</a></li>
-                                                        <li><a class="dropdown-item" href="#">Belgio</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-md-2">
-                                                <label for="inputZip" class="form-label">CAP</label>
-                                                <input type="text" class="form-control" id="inputZip">
-                                            </div>
-
-
-                                            <div class="input-group mb-3">
-                                                <input type="file" class="form-control" id="inputGroupFile02">
-                                            </div>
-
-                                            <div class="col-12 ">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                    <label class="form-check-label" for="gridCheck">
-                                                        Seleziona per proseguire
-                                                    </label>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-grid gap-2 d-md-block">
-                                                <button class="btn btn-primary" type="button">Salva</button>
-                                                <button class="btn link-warning bg-warning text-white "
-                                                    type="button">Svuota</button>
-                                            </div>
-                                        </form>
-
-
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputPassword4" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4">
+                                        </div>
                                     </div>
 
+                                    <div class="row mt-2 flex-column flex-md-row">
+                                        <div class="col input-group">
+
+                                            <div class="col ">
+                                                <label for="inputPassword4" class="form-label">Email</label>
+                                                <div class="col input-group">
+                                                    <span class="input-group-text">@</span>
+                                                    <input type="password" class="form-control" id="inputPassword4">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputPassword4" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <label for="inputAddress2" class="form-label">Address 2</label>
+                                        <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="inputCity" class="form-label">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <label for="inputState" class="form-label">Stato</label>
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle w-100 bg-white border text-start"
+                                                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"
+                                                data-bs-placement="bottom-start">
+                                                Scegli...
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="#">Italia</a></li>
+                                                <li><a class="dropdown-item" href="#">Spagna</a></li>
+                                                <li><a class="dropdown-item" href="#">Belgio</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-2">
+                                        <label for="inputZip" class="form-label">CAP</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div>
+
+
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="inputGroupFile02">
+                                    </div>
+
+                                    <div class="col-12 ">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Seleziona per proseguire
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid gap-2 d-md-block">
+                                        <button class="btn btn-primary" type="button">Salva</button>
+                                        <button class="btn link-warning bg-warning text-white "
+                                            type="button">Svuota</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="d-md-flex w-50 order-md-1 larghezza-massima">
+                        <div class="d-flex flex-column">
+
+                            <div class="d-flex flex-row white mt-2 ">
+                                <h3 class="fs-1 m-0">Boolean</h3>
+
+                                <div class="d-flex align-self-end rounded-5 px-2 ms-2 brg-blu-scuro2 py-1">
+                                    <span class="white">Piano blaze</span>
                                 </div>
                             </div>
-                        </div>
 
+                            <div class="mt-2">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item white">
 
-                    </div>
+                                            <a class="white text-decoration-none rounded-5 brg-blu-scuro2 px-2 py-1 d-flex justify-content-center "
+                                                href="#">3 app</a>
+                                        </li>
+                                        <li class="active ms-1 white  " aria-current="page">
+                                            >>
+                                        </li>
 
-                    <div class="d-flex flex-column d-md-flex order-md-1 pt-2 white w-100 ">
-                        <div class="d-flex flex-row">
-                            <h2>Boolean</h2>
-                            <div
-                                class=" d-flex justify-content-center ms-2 align-self-center brg-blu-scuro2 rounded-4 ">
-                                <span class=" rounded-4 text-center px-2 ">Piano blaze</span>
+                                        <li class="active rounded-5 px-2 ms-1 py-1 brg-blu-scuro2 white d-lg-none "
+                                            aria-current="page">
+                                            +
+                                        </li>
+                                        <li class="d-none d-lg-block white ms-1 ">
 
+                                            <a class="white text-decoration-none rounded-5 brg-blu-scuro2 px-2 py-1 d-flex justify-content-center "
+                                                href="#">Boolean mobile app </a>
+                                        </li>
+                                        <li class="d-none d-lg-block  white ms-1 ">
+
+                                            <a class="white text-decoration-none rounded-5 brg-blu-scuro2 px-2 py-1 d-flex justify-content-center "
+                                                href="#">Boolean web app</a>
+                                        </li>
+                                        <li class="d-none d-lg-block white ms-1 ">
+
+                                            <a class="white text-decoration-none rounded-5 brg-blu-scuro2 px-2 py-1 d-flex justify-content-center  "
+                                                href="#">Boolean blog app</a>
+                                        </li>
+                                    </ol>
+                                </nav>
                             </div>
                         </div>
-                        <div class="">
-                            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
-                                aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">3 app<a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
-                                </ol>
-                            </nav>
+                    </div>
+
+                    <div class="d-md-flex order-md-2 w-25 justify-content-center larghezza-massima ">
+
+                        <div class=" white fs-4">
+                            <span class="fs-5">Studenti online negli ultimi <br> 30 minuti <br></span>
+
+                            <span class="fs-2">125</span>
                         </div>
 
                     </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 border1 ">
+                            
+                            <ul class="list-group">
+                                <li class="list-group-item fs-3">Prossime classi</li>
+                                <li class="list-group-item d-flex p-2">
+                                    <img class="img-fluid" height="20" width="30" src="./assets/img/class-avatar.jpg" alt="">
+                                    <span class="ps-2">A second item</span>
+                                </li>
+                                <li class="list-group-item">A third item</li>
+                                <li class="list-group-item">A fourth item</li>
+                                <li class="list-group-item">And a fifth one</li>
+                              </ul>
 
-                    <div class="d-md-flex order-md-2 pt-2">
-
-                        <div class=" white fs-4 ">
-                            <span>Studenti online negli ultimi <br> 30 minuti <br></span>
-
-                            <span>125</span>
                         </div>
 
                     </div>
-
 
                 </div>
-
-
             </main>
-
         </div>
     </div>
 
