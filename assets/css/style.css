@@ -23,6 +23,9 @@ main {
 .white {
     color: white;
 }
+.sfondo-bianco{
+    background-color: white;
+}
 
 .z-index {
     z-index: 98;
